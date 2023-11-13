@@ -1,2 +1,2 @@
-GET http://localhost:3000/api/cinema/show/eae18d3e-bac4-48f7-9eba-06eaa08d309e
+GET http://localhost:3000/api/cinema/show/5547e2a5-57dd-435a-9c1d-8e9506668d20?booking_id=451298e6-2e78-43d3-9ff5-6c0df82f4bbb
 

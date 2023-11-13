@@ -35,17 +35,17 @@ module.exports = [
 		'controller': 'movies/MovieInfo'
 	},
 	{
-		'path': /^\booking\/([a-z0-9-]+)$/,
+		'path': /^\/booking\/([a-z0-9-]+)$/,
 		'method': 'POST',
 		'controller': 'booking/CreateBooking'
 	},
 	{
-		'path': /^\booking\/([a-z0-9-]+)$/,
+		'path': /^\/booking\/([a-z0-9-]+)$/,
 		'method': 'PATCH',
 		'controller': 'booking/UpdateBooking'
 	},
 	{
-		'path': /^\booking\/([a-z0-9-]+)$/,
+		'path': /^\/booking\/([a-z0-9-]+)$/,
 		'method': 'DELETE',
 		'controller': 'booking/DeleteBooking'
 	}

@@ -4,6 +4,8 @@ global.APP_ROOT = process.main ? process.main.paths[0].split('node_modules')[0] 
 // Менеджер компонентов приложения
 global.AppComponents = require(APP_ROOT + 'utils/AppComponents.js');
 
+const args = process.argv.slice(2);
+
 // Маршруты
 AppComponents.registerComponent(
 	'routes',
@@ -53,4 +55,11 @@ AppComponents.registerComponent(
 );
 
 const app = AppComponents.getComponent('app');
-app.showBanner().generateHalls().generateShows().start();
+
+if (!(args.includes('no-banner'))) {
+	app.showBanner();
+}
+if (!(args.includes('no-generation'))) {
+	app.generateHalls().generateShows();
+}
+app.start();

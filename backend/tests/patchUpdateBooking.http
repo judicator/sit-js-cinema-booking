@@ -1,0 +1,16 @@
+PATCH http://localhost:3000/api/cinema/booking/d9173e78-2b47-4c12-8753-44eb9b99aacf
+
+[
+	{
+		"rowNum": 9,
+		"seatNum": 5
+	},
+	{
+		"rowNum": 9,
+		"seatNum": 6
+	},
+	{
+		"rowNum": 9,
+		"seatNum": 8
+	}
+]
