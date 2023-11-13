@@ -1,0 +1,23 @@
+{
+  "name": "cinema-tickets-booking-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Бэкенд учебного приложения (бронирование билетов на киносеансы) для курса по JavaScript",
+  "keywords": [],
+  "author": "Alexander Rogov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/judicator/sit-js-сinema-booking.git",
+    "directory": "backend"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "generateDB": "node src/generateDB.js",
+    "realMovies": "node src/realMovies.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1"
+  }
+}
