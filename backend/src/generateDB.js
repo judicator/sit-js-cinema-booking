@@ -107,9 +107,8 @@ const app = {
 		movieModel.clearDB();
 		for (let i = 1; i <= moviesCount; i++) {
 			const newMovie = {
-				title: this.words1[Utils.getRandomInt(this.words1.length - 1)] + ' ' +
-					this.words2[Utils.getRandomInt(this.words2.length - 1)],
-				year: 2023,
+				title: Utils.getRandomValFromArr(this.words1) + ' ' + Utils.getRandomValFromArr(this.words2),
+				year: (Utils.gotTheChance(30) ? Utils.getRandomInt(1960, 2015) : 2023),
 				duration: Utils.getRandomInt(this.config.randomMovieMinDuration, this.config.randomMovieMaxDuration),
 				ageRating: '',
 				imdbRating: (Utils.gotTheChance(50) ? Utils.getRandomInt(45, 85) / 10 : null),

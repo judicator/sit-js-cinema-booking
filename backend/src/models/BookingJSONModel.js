@@ -158,17 +158,17 @@ module.exports = class BookingJSONModel extends JSONModel {
 	// Удалить бронь с указанным ID
 	deleteBooking(bookingID) {
 		const bList = this.getObjects();
-		let result = false;
-		bList.forEach(booking => {
-			if (booking.bookings.hasOwnProperty(bookingID)) {
-				result = true;
-				delete booking.bookings[bookingID];
+		let showID = null;
+		bList.forEach(b => {
+			if (b.bookings.hasOwnProperty(bookingID)) {
+				showID = b.showID;
+				delete b.bookings[bookingID];
 			}
 		});
-		if (result) {
+		if (showID) {
 			this.writeData(bList);
 		}
-		return result;
+		return showID;
 	}
 
 	// Получить объект всех бронирований для киносеанса с указанным ID

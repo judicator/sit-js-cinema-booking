@@ -2,11 +2,11 @@ POST http://localhost:3000/api/cinema/booking/5547e2a5-57dd-435a-9c1d-8e9506668d
 
 [
 	{
-		"rowNum": 4,
+		"rowNum": 15,
 		"seatNum": 10
 	},
 	{
-		"rowNum": 4,
+		"rowNum": 15,
 		"seatNum": 11
 	}
 ]
