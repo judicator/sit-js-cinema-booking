@@ -60,8 +60,11 @@ class BackendAPI {
 	}
 
 	// Информация о киносеансе
-	static async getShowInfo(id) {
-		const uri = `${apiURI}/show/${encodeURIComponent(id)}`;
+	static async getShowInfo(id, bookID = null) {
+		let uri = `${apiURI}/show/${encodeURIComponent(id)}`;
+		if (bookID) {
+			uri += '?booking_id=' + encodeURIComponent(bookID);
+		}
 		const response = await fetch(uri);
 		if (response.ok) {
 			const show = await response.json();
